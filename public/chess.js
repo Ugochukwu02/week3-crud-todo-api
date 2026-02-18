@@ -142,7 +142,15 @@ class ChessGame {
 
     getMoveNotation(piece, fromRow, fromCol, toRow, toCol, captured) {
         const files = 'abcdefgh';
-        const pieceSymbol = piece.type === 'pawn' ? '' : piece.type[0].toUpperCase();
+        const pieceMap = {
+            'pawn': '',
+            'knight': 'N',
+            'bishop': 'B',
+            'rook': 'R',
+            'queen': 'Q',
+            'king': 'K'
+        };
+        const pieceSymbol = pieceMap[piece.type];
         const captureSymbol = captured ? 'x' : '';
         const toSquare = files[toCol] + (8 - toRow);
         
