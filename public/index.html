@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess - Play Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>♔ Chess Online</h1>
+            <p>Free Online Chess Platform</p>
+        </header>
+        
+        <div class="game-controls">
+            <button id="newGameBtn" class="btn btn-primary">New Game</button>
+            <button id="flipBoardBtn" class="btn">Flip Board</button>
+            <button id="undoMoveBtn" class="btn">Undo Move</button>
+        </div>
+
+        <div class="game-container">
+            <div class="sidebar">
+                <div class="captured-pieces">
+                    <h3>Captured by Black</h3>
+                    <div id="capturedWhite" class="captured-list"></div>
+                </div>
+                <div class="move-history">
+                    <h3>Move History</h3>
+                    <div id="moveList" class="move-list"></div>
+                </div>
+            </div>
+
+            <div class="board-wrapper">
+                <div id="status" class="status">White to move</div>
+                <div id="chessboard" class="chessboard"></div>
+            </div>
+
+            <div class="sidebar">
+                <div class="game-info">
+                    <h3>Game Info</h3>
+                    <div class="info-item">
+                        <strong>Turn:</strong> <span id="turnInfo">White</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Move:</strong> <span id="moveNumber">1</span>
+                    </div>
+                    <div class="info-item">
+                        <strong>Status:</strong> <span id="gameStatus">Active</span>
+                    </div>
+                </div>
+                <div class="captured-pieces">
+                    <h3>Captured by White</h3>
+                    <div id="capturedBlack" class="captured-list"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="chess.js"></script>
+</body>
+</html>
